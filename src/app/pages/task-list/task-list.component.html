@@ -1,0 +1,72 @@
+<div class="d-flex vh-100">
+    <div class="flex-grow-1 p-4">
+        <!-- Tasks Table -->
+        <table class="table table-striped table-bordered mt-4" style="width: 100%; table-layout: auto;">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="table-header">#</th>
+                    <th class="table-header">Task Title</th>
+                    <th class="table-header">Assigned To</th>
+                    <th class="table-header">Start Time</th>
+                    <th class="table-header">End Time</th>
+                    <th class="table-header">Status</th>
+                    <th class="table-header">Progress</th>
+                    <th class="table-header">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of filteredTasks; let i = index">
+                    <td >{{ i + 1 }}</td>
+                    <td>{{ task.title }}</td>
+                    <td>{{ task.assignedTo }}</td>
+                    <td>{{ task.startTime | date: 'yyyy-MM-dd HH:mm' }}</td>
+                    <td>{{ task.endTime | date: 'yyyy-MM-dd HH:mm' }}</td>
+        
+                    <!-- Status with Dynamic Badges -->
+                    <td>
+                        <span class="badge"
+                              [ngClass]="{
+                                'badge-success': task.status === 'Completed',
+                                'badge-warning': task.status === 'On-going',
+                                'badge-danger': task.status === 'New'
+                              }">
+                            {{ task.status }}
+                        </span>
+                    </td>
+        
+                    <!-- Progress Bar -->
+                    <td>
+                        <div class="progress-container">
+                          <mat-progress-bar mode="determinate" [value]="getProgress(task.status)" [color]="getProgressColor(task.status)">
+                          </mat-progress-bar>
+                          <span>{{ getProgress(task.status) }}%</span>
+                        </div>
+                      </td>
+                    
+                    <td class="text-center">
+                        <div class="d-flex justify-content-center gap-2">
+                            <button mat-icon-button color="primary" (click)="edit(task)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+        
+                            <button mat-icon-button color="accent" [disabled]="!selectedTask || selectedTask.id !== task.id" (click)="update()">
+                                <mat-icon>save</mat-icon>
+                            </button>
+        
+                            <button mat-icon-button color="warn" (click)="delete(task.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr *ngIf="tasks.length === 0">
+                    <td colspan="8" class="text-center text-muted">No tasks available.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button class="btn btn-secondary" routerLink="/dashboard">Go Back</button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,47 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .task-box {
+    width: 100%;
+    max-width: 250px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .new {
+    background-color: #ffeb3b;
+  }
+  
+  .inprogress {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .completed {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .all {
+    background-color: #9c27b0;
+    color: white;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+  }

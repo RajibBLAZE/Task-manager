@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+/* Import Bootstrap (only if not added in angular.json) */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Import Angular Material Theme (Optional if Angular Material is installed) */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+.icon {
+    vertical-align: middle;  /* Align with text */
+    margin-right: 5px;       /* Add spacing */
+    font-size: 20px;         /* Adjust size */
+    color: #080808;          /* Blue color */
+  }
+  

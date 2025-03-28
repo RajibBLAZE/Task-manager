@@ -1,0 +1,38 @@
+<div class="auth-container">
+    <h2>{{ isLoginMode ? 'Login' : 'Sign Up' }}</h2>
+  
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Input Fields -->
+      <div class="input-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email">
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+  
+      <!-- Login/Signup Button -->
+      <div class="button-container text-center">
+        <button mat-raised-button color="primary" type="submit">
+          {{ isLoginMode ? 'Login' : 'Sign Up' }}
+        </button>
+      </div>
+  
+    </form>
+  
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    <br>
+    <div class="text-center">
+        <p>
+            <button (click)="toggleMode()">
+              {{ isLoginMode ? 'Create an account' : 'Already have an account? Login' }}
+            </button>
+          </p>
+    </div>
+  </div>
+  

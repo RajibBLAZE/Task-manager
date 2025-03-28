@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="tForm" (ngSubmit)="onClickSubmit()">
+          
+          <!-- Task Title -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Task Title</mat-label>
+            <input matInput type="text" formControlName="title" required />
+            <mat-error *ngIf="tForm.get('title')?.invalid && tForm.get('title')?.touched">
+              Please enter a valid title
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- Assigned To -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Assigned To</mat-label>
+            <input matInput type="text" formControlName="assignedTo" required />
+            <mat-error *ngIf="tForm.get('assignedTo')?.invalid && tForm.get('assignedTo')?.touched">
+              Please enter a valid name
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- Start Time -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Start Time</mat-label>
+            <input matInput type="datetime-local" formControlName="startTime" required />
+            <mat-error *ngIf="tForm.get('startTime')?.invalid && tForm.get('startTime')?.touched">
+              Please enter a valid start time
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- End Time -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>End Time</mat-label>
+            <input matInput type="datetime-local" formControlName="endTime" required />
+          </mat-form-field>
+  
+          <!-- Status -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+              <mat-option *ngFor="let s of taskstatus" [value]="s">
+                {{ s }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button mat-raised-button color="primary" type="submit">Submit</button><br><br>
+            <button class="btn btn-secondary" routerLink="/dashboard">Go Back</button>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+  

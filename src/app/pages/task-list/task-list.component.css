@@ -1,0 +1,66 @@
+.bg-dark {
+    background-color: #343a40 !important;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .badge {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .btn-sm i {
+    font-size: 14px;
+  }
+  .badge-success {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.badge-warning {
+    background-color: #ffc107; /* Yellow */
+    color: black;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.badge-danger {
+    background-color: #dc3545; /* Red */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+/* Increase header font size */
+.table-header {
+  font-size: 1.2rem; /* Adjust as needed */
+  font-weight: bold;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  font-size: 16px; /* Increase header font size */
+}
+
+td {
+  font-size: 14px; /* Increase table data font size */
+}
+
+.mat-progress-bar {
+  width: 150px; /* Set a fixed width for progress bar */
+}
+
+
