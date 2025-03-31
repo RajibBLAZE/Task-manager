@@ -97,13 +97,15 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ### Screenshots
 
-![image](https://github.com/user-attachments/assets/23a33a6d-80f4-46d6-8dd6-e4ded3dfa6c5)
-
+#### Log In Page 
 ![image](https://github.com/user-attachments/assets/623ad41d-faa9-4684-93b6-c89d0bf507ed)
-
-![image](https://github.com/user-attachments/assets/e9790edc-21f6-45d2-8def-4ec65b7c2e1b)
-
-![image](https://github.com/user-attachments/assets/0c62e8b9-89f4-485a-8af8-aeb983a059ba)
-
+#### Sign up Page 
+![image](https://github.com/user-attachments/assets/23a33a6d-80f4-46d6-8dd6-e4ded3dfa6c5)
+#### Dashboard Page
 ![image](https://github.com/user-attachments/assets/d436daad-d3ea-4f28-9f6e-8c4757a445f8)
+#### Task Details form
+![image](https://github.com/user-attachments/assets/e9790edc-21f6-45d2-8def-4ec65b7c2e1b)
+#### Task View Page
+![image](https://github.com/user-attachments/assets/0c62e8b9-89f4-485a-8af8-aeb983a059ba)
+#### Updated dashboards
 ![image](https://github.com/user-attachments/assets/a9c58dab-a6c7-42e6-8d02-ddd0b5063d95)
