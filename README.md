@@ -6,7 +6,7 @@ Building a task management system which contain Dashboard, task-list, Task-detai
 
 
 <p align="center">
-  <a href="hhttps://rajibblaze.github.io/Task-manager">View Demo</a>
+  <a href="https://rajibblaze.github.io/Task-manager">View Demo</a>
 </p>
 
 <details>
